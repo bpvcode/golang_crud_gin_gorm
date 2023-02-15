@@ -26,13 +26,39 @@ DB_PORT="${CHANGE_ME}"
 DB_SSL_MODE="${CHANGE_ME}"
 ```
 
-## Start the app locally
+## Start app locally
 
-Run this command in the root of the project
+Run this command at the root of the project, to run the app from source code:
 
 ```bash
 go run main.go
 ```
+
+## Run app as Docker container
+
+Run this command at the root of the project, to run the app as docker container:
+
+Build docker image:
+
+```bash
+docker build -t docker.io/library/golang-crud-gin-gorm .
+```
+
+Run docker image:
+
+```bash
+docker run -p 8080:3000 docker.io/library/golang-crud-gin-gorm
+```
+
+Go to:
+
+```bash
+http://localhost:8080/api/...
+```
+
+**NOTE:**
+
+To run the app as docker container you need to have docker installed on your machine - [Install docker](https://docs.docker.com/engine/install/ubuntu/)
 
 ## Endpoints available
 
